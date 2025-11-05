@@ -1,106 +1,55 @@
 {
-    "extends": [
-        "config:recommended",
-        ":dependencyDashboard",
-        "helpers:pinGitHubActionDigests",
-        ":semanticCommits"
-    ],
-    "schedule": [
-        "on saturday"
-    ],
-    "assignees": [
-        "r4b2"
-    ],
-    "labels": [
-        "dependencies"
-    ],
+    "extends": ["config:recommended", ":dependencyDashboard", "helpers:pinGitHubActionDigests", ":semanticCommits"],
+    "schedule": ["on saturday"],
+    "assignees": ["r4b2"],
+    "labels": ["dependencies"],
     "semanticCommits": "enabled",
     "recreateWhen": "always",
     "separateMajorMinor": false,
     "packageRules": [
         {
-            "matchManagers": [
-                "github-actions"
-            ],
+            "matchManagers": ["github-actions"],
             "groupName": "github-actions",
             "commitMessagePrefix": "chore(github-actions): ",
             "pinDigests": true,
-            "labels": [
-                "dependencies",
-                "github-actions"
-            ]
+            "labels": ["dependencies", "github-actions"]
         },
         {
-            "matchManagers": [
-                "terraform"
-            ],
+            "matchManagers": ["terraform"],
             "groupName": "terraform",
             "commitMessagePrefix": "chore(terraform): ",
-            "labels": [
-                "dependencies",
-                "terraform"
-            ]
+            "labels": ["dependencies", "terraform"]
         },
         {
-            "matchManagers": [
-                "gomod"
-            ],
+            "matchManagers": ["gomod"],
             "groupName": "go",
             "commitMessagePrefix": "chore(go): ",
-            "labels": [
-                "dependencies",
-                "go"
-            ]
+            "labels": ["dependencies", "go"]
         },
         {
-            "matchManagers": [
-                "npm"
-            ],
+            "matchManagers": ["npm"],
             "groupName": "bun",
             "commitMessagePrefix": "chore(bun): ",
-            "labels": [
-                "dependencies",
-                "bun"
-            ]
+            "labels": ["dependencies", "bun"]
         },
         {
-            "matchManagers": [
-                "pip_requirements"
-            ],
+            "matchManagers": ["pip_requirements"],
             "groupName": "python",
             "commitMessagePrefix": "chore(python): ",
-            "labels": [
-                "dependencies",
-                "python"
-            ]
+            "labels": ["dependencies", "python"]
         },
         {
-            "matchManagers": [
-                "docker-compose"
-            ],
-            "matchFileNames": [
-                "**/docker-compose.yml"
-            ],
+            "matchManagers": ["docker-compose"],
+            "matchFileNames": ["**/docker-compose.yml"],
             "groupName": "docker-compose",
             "commitMessagePrefix": "chore(docker-compose): ",
-            "labels": [
-                "dependencies",
-                "docker"
-            ]
+            "labels": ["dependencies", "docker"]
         },
         {
-            "matchManagers": [
-                "dockerfile"
-            ],
-            "matchPackageNames": [
-                "oven/bun"
-            ],
-            "groupName": "bun-runtime",
-            "commitMessagePrefix": "chore(bun-runtime): ",
-            "labels": [
-                "dependencies",
-                "bun"
-            ]
+            "matchManagers": ["dockerfile"],
+            "groupName": "docker",
+            "commitMessagePrefix": "chore(docker): ",
+            "labels": ["dependencies", "docker"]
         }
     ]
 }
