@@ -87,6 +87,20 @@
                 "dependencies",
                 "docker"
             ]
+        },
+        {
+            "matchManagers": [
+                "dockerfile"
+            ],
+            "matchPackageNames": [
+                "oven/bun"
+            ],
+            "groupName": "bun-runtime",
+            "commitMessagePrefix": "chore(bun-runtime): ",
+            "labels": [
+                "dependencies",
+                "bun"
+            ]
         }
     ]
 }
