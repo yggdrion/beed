@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/yggdrion/beed/compare/v1.0.0...v1.0.1) (2025-11-05)
+
+### Bug Fixes
+
+* **bun:** typescript ([720598e](https://github.com/yggdrion/beed/commit/720598e00e599727732bd1b917622087e842b73c))
+* **prettier:** fmt ([29432a9](https://github.com/yggdrion/beed/commit/29432a9c2fcb8b9c698e1bd1b479793063823678))
+* **renovate:** docker bun ([cd97456](https://github.com/yggdrion/beed/commit/cd9745692ef371d48512902cd44ef6379c8da842))
+* **renovate:** dockerfile ([cc8567f](https://github.com/yggdrion/beed/commit/cc8567f1824ff226d2f8dea813d00e51620568d5))
+
 ## 1.0.0 (2025-10-12)
 
 ### Bug Fixes
